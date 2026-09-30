@@ -1,5 +1,7 @@
 import SmilesForm from './components/SmilesForm';
 import ToxicityCard from './components/ToxicityCard';
+import SearchResults from './components/SearchResults';
+import { mockSearchResults } from './data/mockSearchResults';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <main>
         <SmilesForm />
         <ToxicityCard pred={0} score={0} />
+
+        <SearchResults results={mockSearchResults} />
       </main>
     </div>
   );
