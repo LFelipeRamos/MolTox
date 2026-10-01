@@ -12,12 +12,17 @@ function SearchResults(props: SearchResultsProps) {
     return <p>Nenhum resultado encontrado</p>;
   }
 
-  return results.map((result) => (
-    <CompoundCard
-      key={result.id}
-      result={result}
-    />
-  ));
+return (
+  <section className="container my-4">
+    <div className="row g-3">
+      {results.map((result) => (
+        <div className="col-12 col-md-6 col-lg-4" key={result.id}>
+          <CompoundCard result={result} />
+        </div>
+      ))}
+    </div>
+  </section>
+  );
 }
 
 export default SearchResults;
